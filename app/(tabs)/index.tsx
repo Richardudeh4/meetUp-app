@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Stack.Screen options={{ title: 'Events' }} />
-      <ScrollView>
+      <ScrollView className='bg-white'>
         {
             Events.map((item, i) => (
             <EventListItem 
@@ -20,6 +20,7 @@ export default function Home() {
               dateTime={item.datetime}
               location={item.location}
               image={item.image}
+              
                />
               ))
         }
