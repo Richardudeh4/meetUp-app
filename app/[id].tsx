@@ -1,4 +1,4 @@
-import { Image, Text, View } from 'react-native'
+import { Image, Pressable, Text, View } from 'react-native'
 import React from 'react'
 import { useLocalSearchParams , Stack} from 'expo-router'
 import events from "../assets/events.json";
@@ -26,6 +26,13 @@ export default function EventPage() {
 
         <Text className='text-lg' numberOfLines={2}>{event.description}</Text>
  
+ {/* Footer */}
+ <View className='absolute bottom-0 left-0 right-0 p-5 pb-10 items-center border-t-2 flex-row justify-between border-gray-400 '>
+  <Text className='text-2xl  font-semibold'>Free</Text>
+  <Pressable className='bg-green-500 p-5 border border-slate-300 rounded-md'>
+    <Text className='text-lg font-bold text-white'>Join and RSVP</Text>
+  </Pressable>
+ </View>
     </View>
   )
 }
